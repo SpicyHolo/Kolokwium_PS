@@ -17,6 +17,8 @@ protected:
 	sf::Vector2f velocity;
 
 	sf::FloatRect bounds;
+
+	bool exists;
 public:
 	AvengerSprite(sf::RenderWindow* window, const float max_velocity);
 	virtual ~AvengerSprite();
@@ -24,5 +26,9 @@ public:
 	void setPosition(const sf::Vector2f &position);
 	virtual void Animuj(float& dt, sf::RenderTarget& target);
 	void Kolizja();
+	//Accessors
+	sf::FloatRect getBounds();
+	bool getExists();
+	void kill();
 };
 

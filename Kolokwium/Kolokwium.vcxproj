@@ -147,13 +147,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\KamienNieskonczonosci.cpp" />
     <ClCompile Include="src\AvengerSprite.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Thor.cpp" />
+    <ClCompile Include="src\StworOutrider.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\KamienNieskonczonosci.h" />
     <ClInclude Include="src\AvengerSprite.h" />
     <ClInclude Include="src\Thor.h" />
+    <ClInclude Include="src\StworOutrider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

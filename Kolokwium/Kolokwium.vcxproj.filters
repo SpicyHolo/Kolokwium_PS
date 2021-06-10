@@ -24,12 +24,24 @@
     <ClCompile Include="src\Thor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\KamienNieskonczonosci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StworOutrider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AvengerSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Thor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KamienNieskonczonosci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StworOutrider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

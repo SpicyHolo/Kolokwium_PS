@@ -1,7 +1,7 @@
 #include "Thor.h"
 
 Thor::Thor(sf::RenderWindow* window, const float max_velocity)
-	: AvengerSprite(window, max_velocity), direction(RIGHT)
+	: AvengerSprite(window, max_velocity), direction(RIGHT), hp(3), points(0)
 {
 	this->texture.loadFromFile("resources/Thor.png");
 	this->sprite.setTexture(this->texture);
@@ -28,6 +28,8 @@ void Thor::changeDirection(short dir)
 void Thor::Animuj(float& dt, sf::RenderTarget& target)
 {
 	//Update
+	this->bounds = this->sprite.getGlobalBounds();
+
 	this->Kolizja();
 
 	switch (direction) {
@@ -52,4 +54,30 @@ void Thor::Animuj(float& dt, sf::RenderTarget& target)
 
 	//Render
 	target.draw(this->sprite);
+}
+
+void Thor::removeHp()
+{
+	this->hp--;
+}
+
+bool Thor::checkHp()
+{
+	if (this->hp <= 0)
+		return true;
+	else
+		return false;
+}
+
+void Thor::addPoints()
+{
+	this->points += 100;
+}
+
+bool Thor::checkPoints()
+{
+	if (this->points >= 600)
+		return true;
+	else
+		return false;
 }
